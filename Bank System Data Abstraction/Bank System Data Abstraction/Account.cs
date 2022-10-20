@@ -18,7 +18,7 @@ namespace Bank_System_Data_Abstraction
 
         public string AccountName { get; set; }
 
-        public string AccountType { get; set; }
+        private string AccountType;
 
         private double AccountBalance;
 
@@ -27,6 +27,11 @@ namespace Bank_System_Data_Abstraction
         public double CheckBalance()
         {
             return AccountBalance;
+        }
+
+        public string GetAccountType()
+        {
+            return AccountType;
         }
 
         public void AddFunds(double amount)
