@@ -18,11 +18,11 @@ namespace Bank_System_Data_Abstraction
 
         public string BankName { get; set; }
 
-        public List<Member> BankMembers { get; set; }
+        private List<Member> BankMembers;
 
-        public double BankBalance { get; set; }
+        private double BankBalance;
 
-        public int BankTransactionCount { get; set; }
+        private int BankTransactionCount;
 
 
         public void AddMember(Member newMember)
@@ -36,11 +36,26 @@ namespace Bank_System_Data_Abstraction
             BankBalance = 0.00;
             foreach (Member member in BankMembers)
             {
-                foreach (Account account in member.Accounts)
+                foreach (Account account in member.GetAccounts())
                 {
                     BankBalance += account.CheckBalance();
                 }
             }
+        }
+
+        public List<Member> GetMembers()
+        {
+            return BankMembers;
+        }
+
+        public double CheckBalance()
+        {
+            return BankBalance;
+        }
+
+        public int GetTransactionCount()
+        {
+            return BankTransactionCount;
         }
     }
 }

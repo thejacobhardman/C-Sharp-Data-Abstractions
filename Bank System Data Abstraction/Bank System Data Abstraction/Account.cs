@@ -20,9 +20,9 @@ namespace Bank_System_Data_Abstraction
 
         public string AccountType { get; set; }
 
-        public double AccountBalance { get; set; }
+        private double AccountBalance;
 
-        public int TransactionCount { get; set; }
+        private int TransactionCount;
 
         public double CheckBalance()
         {
