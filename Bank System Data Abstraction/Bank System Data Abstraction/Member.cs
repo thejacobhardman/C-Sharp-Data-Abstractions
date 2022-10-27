@@ -19,7 +19,24 @@ namespace Bank_System_Data_Abstraction
 
         private double Balance;
 
-        private List<Account> Accounts;
+        private readonly List<Account> Accounts;
+
+        public void PrintMemberInfo()
+        {
+            Console.WriteLine("Member Info:");
+            Console.WriteLine("---------------");
+            Console.WriteLine("Name: " + Name);
+            CalculateBalance();
+            Console.WriteLine("Total Balance: $" + Balance);
+            Console.WriteLine("Accounts:");
+            foreach (Account account in Accounts)
+            {
+                Console.WriteLine("---");
+                Console.WriteLine("Name: " + account.AccountName);
+                Console.WriteLine("Type: " + account.GetAccountType());
+                account.PrintBalance();
+            }
+        }
 
         public double CheckBalance()
         {
