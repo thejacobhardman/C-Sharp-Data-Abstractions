@@ -25,6 +25,12 @@ namespace Bank_System_Data_Abstraction
         {
             return AccountBalance;
         }
+
+        public void PrintBalance()
+        {
+            Console.WriteLine(AccountName + " Balance: $" + AccountBalance);
+        }
+
         public void AddFunds(double amount)
         {
             AccountBalance += amount;
