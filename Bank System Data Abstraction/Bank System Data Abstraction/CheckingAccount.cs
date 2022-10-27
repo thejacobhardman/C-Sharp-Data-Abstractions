@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Bank_System_Data_Abstraction
 {
-    internal class CheckingAccount
+    internal class CheckingAccount: Account
     {
+        public CheckingAccount(string accountName, double accountBalance): base(accountName, accountBalance, "Checking Account")
+        {
+            AccountName = accountName;
+            AccountBalance = accountBalance;
+            TransactionCount = 0;
+        }
     }
 }
