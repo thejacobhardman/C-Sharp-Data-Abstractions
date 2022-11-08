@@ -16,17 +16,17 @@
             Team team1 = new("Panthers");
             Team team2 = new("Celtics");
 
-            Player jimmy = new("Jimmy", 0, team1, new Location(0, 0));
-            Player tommy = new("Tommy", 1, team1, new Location(3, 5));
-            Player bobby = new("Bobby", 2, team1, new Location(4, 4));
+            Player jimmy = new("Jimmy", 0, new Location(0, 0));
+            Player tommy = new("Tommy", 1, new Location(3, 5));
+            Player bobby = new("Bobby", 2, new Location(4, 4));
 
             team1.AddPlayer(jimmy);
             team1.AddPlayer(tommy);
             team1.AddPlayer(bobby);
 
-            Player larry = new("Larry", 0, team2, new Location(2, 4));
-            Player harry = new("Harry", 1, team2, new Location(7, 5));
-            Player barry = new("Barry", 2, team2, new Location(7, 3));
+            Player larry = new("Larry", 0, new Location(2, 4));
+            Player harry = new("Harry", 1, new Location(7, 5));
+            Player barry = new("Barry", 2, new Location(7, 3));
 
             team2.AddPlayer(larry);
             team2.AddPlayer(harry);
