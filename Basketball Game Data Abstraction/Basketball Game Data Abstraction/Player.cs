@@ -8,12 +8,15 @@ namespace Basketball_Game_Data_Abstraction
 {
     internal class Player : Employee
     {
-        public Player(string name, int playerNumber, Team? team, Location location): base(name, playerNumber, team, location)
+        public Player(string name, int playerNumber, Location location) : base(name, playerNumber, location)
         {
             Name = name;
             Number = playerNumber;
+            Team = null;
             Location = location;
         }
+
+        public Team? Team { get; set; }
 
         public void AssignToTeam(Team team)
         {
