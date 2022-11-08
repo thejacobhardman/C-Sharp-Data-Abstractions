@@ -6,22 +6,14 @@ using System.Threading.Tasks;
 
 namespace Basketball_Game_Data_Abstraction
 {
-    internal class Player
+    internal class Player : Employee
     {
-        public Player(string name, int playerNumber, Location location)
+        public Player(string name, int playerNumber, Team? team, Location location): base(name, playerNumber, team, location)
         {
             Name = name;
             Number = playerNumber;
             Location = location;
         }
-
-        public string Name { get; set; }
-
-        public int Number { get; set; }
-
-        public Team? Team { get; set; }
-
-        public Location Location { get; set; }
 
         public void AssignToTeam(Team team)
         {
@@ -35,7 +27,8 @@ namespace Basketball_Game_Data_Abstraction
             {
                 Team.RemovePlayer(this);
                 Team = null;
-            } else
+            }
+            else
             {
                 Console.WriteLine("Player is not currently part of a team.");
             }
