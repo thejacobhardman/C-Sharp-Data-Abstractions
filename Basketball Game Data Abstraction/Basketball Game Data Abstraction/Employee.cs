@@ -8,7 +8,7 @@ namespace Basketball_Game_Data_Abstraction
 {
     internal class Employee
     {
-        public Employee (string name, int number, Team? team, Location location)
+        public Employee (string name, int number, Location location)
         {
             Name = name;
             Number = number;
@@ -18,8 +18,6 @@ namespace Basketball_Game_Data_Abstraction
         public string Name { get; set; }
 
         public int Number { get; set; }
-
-        public Team? Team { get; set; }
 
         public Location Location { get; set; }
     }
