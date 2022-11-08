@@ -110,7 +110,7 @@ namespace Basketball_Game_Data_Abstraction
         {
             int maxDistance = (int)Math.Sqrt((9 - 0) ^ 2 + (9 - 0) ^ 2);
             int closestDistance = maxDistance;
-            Player closestPlayer = new("placeholder", 0, new Location(0, 0));
+            Player closestPlayer = new("placeholder", 0, null, new Location(0, 0));
             foreach (Team team in Teams)
             {
                 foreach (Player player in team.Players)
